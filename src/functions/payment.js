@@ -7,7 +7,7 @@ require("dotenv").config({
 exports.handler = async event => {
   const { amount, currency, email, item_name } = JSON.parse(event.body)
 
-  const stripe = new Stripe(`${process.env.STRIPE_SECRET_KEY}`, {
+  const stripe = new Stripe("sk_test_CIW1I8KefE1T0VSUCeUrzrUs", {
     maxNetworkRetries: 2, // Retry this specific request twice before giving up
   })
 
