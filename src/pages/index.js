@@ -4,7 +4,7 @@ import { loadStripe } from "@stripe/stripe-js"
 import CheckoutForm from "../components/stripe/CheckoutForm"
 
 export default () => {
-  const stripePromise = loadStripe(process.env.STRIPE_PUBLISH_KEY)
+  const stripePromise = loadStripe(`${process.env.STRIPE_PUBLISH_KEY}`)
 
   return (
     <div>
